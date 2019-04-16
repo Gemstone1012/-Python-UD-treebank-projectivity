@@ -1,20 +1,4 @@
 #!/usr/bin/python3
-""" Data Structures and Algorithms for CL III, Assignment 12 (graded)
-    
-    This file contains the template for implementing the second
-    exercise: counting the number of non-projective trees in 
-    UD treebank given as a CoNLL-U file on the command line.
-
-    See <https://dsacl3-2018.github.io/a12/> detailed instructions.
-
-    Course:      Data Structures and Algorithms for CL III - WS1819
-    Assignment:  a12
-    Author:      Zhuge Gao
-    Description: This program  finds and counts the number of non-projective trees in a treebank in CoNLL-U format.
-    It takes a single command-line argument, the name of the CoNLL-U file, and output the number and ratio (percentage)
-    of non-projective trees in the treebank.
-    Honor Code:  I pledge that this program represents my own work.
-"""
 
 import sys
 from conllu import conllu_sentences

@@ -1,19 +1,4 @@
 #!/usr/bin/python3
-""" Data Structures and Algorithms for CL III, Assignment 12 (graded)
-    
-    This file contains the template for implementing the third
-    exercise: "projectivizing" a non-projective UD treebaank
-    given as a CoNLL-U file on the command line.
-
-    See <https://dsacl3-2018.github.io/a12/> detailed instructions.
-
-    Course:      Data Structures and Algorithms for CL III - WS1819
-    Assignment:  a12
-    Author:      Zhuge Gao
-    Description: This program will find non-projective sentences in a treebank and "projectivize" them. After that it
-    will print the resulting sentences to the screen instead of changing the original file.
-    Honor Code:  I pledge that this program represents my own work.
-"""
 
 import sys
 from conllu import conllu_sentences

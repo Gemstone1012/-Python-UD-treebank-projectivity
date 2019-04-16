@@ -1,19 +1,4 @@
 #!/usr/bin/python3
-""" Data Structures and Algorithms for CL III, Assignment 12 (graded)
-    
-    This file contains the template for implementing the first
-    exercise: gathering word-order statitics from a CoNLL-U formated
-    UD treebank.
-
-    See <https://dsacl3-2018.github.io/a12/> detailed instructions.
-
-    Course:      Data Structures and Algorithms for CL III - WS1819
-    Assignment:  a12
-    Author:      Zhuge Gao
-    Description: This program reads a treebank in CoNLL-U format, and prints out some statistics about subject, verb
-    and object order. It takes a single command-line argument, the name of the CoNLL-U file as the argument.
-    Honor Code:  I pledge that this program represents my own work.
-"""
 
 import sys
 from conllu import conllu_sentences
