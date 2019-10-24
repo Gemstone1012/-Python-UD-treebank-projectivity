@@ -7,28 +7,28 @@ import sys
 
 class Node(object):
     """ Holds a node (a word) in a dependency tree
-        
+
         Except last three arguments, the attributes correspond to CoNLL-U
         columns. Integer values are explicitly typecast.
             multi       keeps the end of the range (the part after the
-                        dash in CoNLL-U, in a multi-word token. 
+                        dash in CoNLL-U, in a multi-word token.
                         'index' holds the beginning of the range.
             empty       keeps secondary index of an 'empty' word (the
-                        part after the dot in CoNLL-U). 'index' holds 
+                        part after the dot in CoNLL-U). 'index' holds
                         the part before the dot.
     """
 
     __slots__ = ("index form lemma upos xpos feats "
                  "head deprel deps misc multi empty").split()
 
-    def __init__(self, 
+    def __init__(self,
                  index=0, form=None, lemma=None,
                  upos=None, xpos=None, feats=None,
                  head=None, deprel=None, deps=[],
                  misc=None, multi=0, empty=0):
         self.index=int(index)
         self.form=form
-        self.lemma=(None if not lemma or 
+        self.lemma=(None if not lemma or
                         (lemma == '_' and upos != 'PUNCT')
                     else lemma)
         self.upos=upos
@@ -46,7 +46,7 @@ class Node(object):
         columns = s.rstrip().split("\t")
         if '-' in columns[0]:
             begin, end = columns[0].split('-')
-            return cls(index=begin, form=columns[1], 
+            return cls(index=begin, form=columns[1],
                     misc=columns[8], multi=end)
         elif '.' in columns[0]:
             empty_id = columns[0].split('.')
@@ -231,6 +231,8 @@ def conllu_sentences(f):
     if isinstance(f, str): # close only if we opened it
         fp.close()
 
+def push_test():
+    pass
 
 if '__main__' == __name__:
 
